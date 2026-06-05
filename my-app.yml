@@ -6,15 +6,20 @@ metadata:
 
 spec:
   project: default
+
   source:
-    repoURL: 'https://github.com/HUkarthik/argocd-app.git'
+    repoURL: https://github.com/HUkarthik/argocd-app.git
     targetRevision: HEAD
     path: .
 
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
     namespace: my-space
+
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
