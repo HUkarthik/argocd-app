@@ -16,6 +16,6 @@ spec:
   spec:
    containers:
     - name: app-deploy
-      image: nginx:latest
+      image: hukarthik/python-project:0.1
       ports:
-       - containerPort: 80
+       - containerPort:  8000
